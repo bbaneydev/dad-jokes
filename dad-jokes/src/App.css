@@ -1,38 +1,274 @@
-.App {
-  text-align: center;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* --------------------------------------End of Meyer Reset---------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  font-family: 'Luckiest Guy';
+  background-color: #a7ddec;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.nav-container nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 60px;
+  background-color: #2bc5da;
+  color: #ef7631;
+  font-weight: bold;
+}
+
+.nav-container nav h1 {
+  margin-top: 1%;
+  margin-left: 12%;
+  font-size: 24px;
+  -webkit-text-stroke: 1px black;
+}
+
+.nav-container nav ul {
+  display: flex;
+  margin: 1%;
+  margin-right: 12%;
+}
+
+.nav-container nav ul li {
+  margin-left: 8%;
+  width: 110px;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-text-stroke: 1px black;
+}
+
+.nav-container nav ul li:hover {
+  color: grey
+}
+
+/* ----------------------------------------------End of Nav------------------------- */
+
+.cta {
+  display: flex;
+  width: 80%;
+  margin: 2% auto;
+  height: 400px;
+  background: hsla(187, 70%, 51%, 1);
+  background: linear-gradient(40deg, hsla(187, 70%, 51%, 1) 50%, hsla(191, 58%, 39%, 1) 50%);
+  background: -moz-linear-gradient(40deg, hsla(187, 70%, 51%, 1) 50%, hsla(191, 58%, 39%, 1) 50%);
+  background: -webkit-linear-gradient(40deg, hsla(187, 70%, 51%, 1) 50%, hsla(191, 58%, 39%, 1) 50%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#2BC5DA", endColorstr="#2A899E", GradientType=1 );
+}
+
+.left-cta {
+  width: 50%;
+  height: 100%;
+}
+
+.left-cta h1 {
+  text-align: center;
+  font-size: 34px;
+  padding-top: 6%;
+  -webkit-text-stroke: 1px black;
+  color:#ef7631;
+}
+
+.left-cta p {
+  padding-top: 4%;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
   color: white;
+  line-height: 1.5;
 }
 
-.App-link {
-  color: #61dafb;
+.left-cta button {
+  margin: 4% auto;
+  display: block;
+  background-color: #ef7631;
+  color: white;
+  font-family: 'Luckiest Guy';
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  font-size: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease 0s;
+	outline: none;
+  -webkit-text-stroke: 1px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-cta button:hover {
+  color: grey;
+	transform: translateY(-2px);
+}
+
+.right-cta img{
+  height: 300px;
+  margin-top: 10%;
+  margin-left: 60%;
+}
+
+.examples {
+  width: 80%;
+  margin: 4% auto;
+  height: 340px;
+  background-color: #2bc5da;
+}
+
+.examples h1 {
+  font-size: 34px;
+  text-align: center;
+  padding-top: 2%;
+  margin-bottom: 1%;
+  -webkit-text-stroke: 1px black;
+  color:#ef7631;
+}
+
+.examples p {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.examples button {
+  margin: 2% auto;
+  display: block;
+  background-color: #ef7631;
+  color: white;
+  font-family: 'Luckiest Guy';
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  font-size: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  -webkit-text-stroke: 1px black;
+  transition: all 0.3s ease 0s;
+	outline: none;
+}
+
+.examples button:hover {
+  color: grey;
+	transform: translateY(-2px);
+}
+
+.bottom-content {
+  display: flex;
+  width: 80%;
+  margin: 2% auto;
+}
+
+.bottom-content h1 {
+  text-align: center;
+  color:#ef7631;
+  font-size: 34px;
+  padding-top: 2%;
+  -webkit-text-stroke: 1px black;
+}
+
+.bottom-content p {
+  width: 60%;
+  text-align: center;
+  margin: 2% auto;
+  line-height: 1.2;
+  font-size: 20px;
+}
+
+.left-bottom {
+  background-color: #2bc5da;
+  height: 340px;
+  width: 99%;
+  margin-right: 1%;
+}
+
+.right-bottom {
+  background-color: #2bc5da;
+  height: 340px;
+  width: 99%;
+}
+
+.left-bottom button {
+  margin: 2% auto;
+  display: block;
+  background-color: #ef7631;
+  color: white;
+  font-family: 'Luckiest Guy';
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  font-size: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  -webkit-text-stroke: 1px black;
+  transition: all 0.3s ease 0s;
+	outline: none;
+}
+
+.left-bottom button:hover {
+  color: grey;
+	transform: translateY(-2px);
+}
+
+/* -----------------------------------------------End of Landing Page----------------- */
+
+.footer {
+  margin-top: auto;
+  text-align: center;
+  max-width: 100%;
+  height: 60px;
+  background-color: #2bc5da;
+  color: #ef7631;
+  font-weight: bold;
+}
+
+.footer h1 {
+  padding-top: 1%;
+  -webkit-text-stroke: 1px black;
 }
